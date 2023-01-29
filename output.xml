@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.10.6 on linux)" generated="20230129 17:57:29.574" rpa="false">
+<suite id="s1" name="Ponto Venda Tests" source="/home/marcossuba/Documentos/workplace/desafio-qa/Desafio-qa-kmee/feature/tests/ponto_venda_tests.robot">
+<test id="s1-t1" name="Scenario: User can filter products by category">
+<kw name="Open Login Page Using Chrome Browser" library="resources" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20230129 17:57:29.745" level="INFO">Opening browser 'Chrome' to base url 'https://23250900-14-0-all.runbot123.odoo.com/web/login/'.</msg>
+<status status="PASS" starttime="20230129 17:57:29.744" endtime="20230129 17:57:33.328"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230129 17:57:33.329" endtime="20230129 17:57:33.438"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:29.744" endtime="20230129 17:57:33.439"></status>
+</kw>
+<kw name="GIVEN Login Page Opened" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.441" endtime="20230129 17:57:33.499"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:33.526" level="INFO">Element '//input[@name='login']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:33.499" endtime="20230129 17:57:33.527"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.527" endtime="20230129 17:57:33.556"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:33.578" level="INFO">Element '//input[@name='password']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:33.556" endtime="20230129 17:57:33.578"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.440" endtime="20230129 17:57:33.579"></status>
+</kw>
+<kw name="WHEN Input Username And Password" library="login_steps">
+<arguments>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+</arguments>
+<kw name="Input Username" library="login_pages">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.580" endtime="20230129 17:57:33.634"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:33.636" level="INFO">Typing text 'admin' into text field '//input[@name='login']'.</msg>
+<status status="PASS" starttime="20230129 17:57:33.635" endtime="20230129 17:57:33.715"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.580" endtime="20230129 17:57:33.716"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.718" endtime="20230129 17:57:33.831"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:33.832" level="INFO">Typing text 'admin' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20230129 17:57:33.832" endtime="20230129 17:57:33.913"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.716" endtime="20230129 17:57:33.914"></status>
+</kw>
+<kw name="Show Password Button Should Be Visible" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.914" endtime="20230129 17:57:33.937"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:33.954" level="INFO">Element '//a[@href='/web/reset_password'][text()='Reset Password']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:33.937" endtime="20230129 17:57:33.954"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.914" endtime="20230129 17:57:33.955"></status>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.955" endtime="20230129 17:57:33.984"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:33.985" endtime="20230129 17:57:34.007"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.955" endtime="20230129 17:57:34.007"></status>
+</kw>
+<kw name="Click Login Button" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:34.008" endtime="20230129 17:57:34.029"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:34.029" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230129 17:57:34.029" endtime="20230129 17:57:35.275"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:34.007" endtime="20230129 17:57:35.275"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:33.579" endtime="20230129 17:57:35.275"></status>
+</kw>
+<kw name="THEN CLICK LINK" library="home_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LINK_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:35.276" endtime="20230129 17:57:35.889"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LINK_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:35.889" level="INFO">Clicking element '//a[@data-toggle='dropdown']'.</msg>
+<status status="PASS" starttime="20230129 17:57:35.889" endtime="20230129 17:57:35.956"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:35.276" endtime="20230129 17:57:35.956"></status>
+</kw>
+<kw name="THEN CLICK LINK_SALE" library="home_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LINK_SALE}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:35.957" endtime="20230129 17:57:36.000"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LINK_SALE}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:36.001" level="INFO">Clicking element '//a[@data-menu-id='563']'.</msg>
+<status status="PASS" starttime="20230129 17:57:36.000" endtime="20230129 17:57:36.091"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:35.956" endtime="20230129 17:57:36.091"></status>
+</kw>
+<kw name="THEN Home Page Opened" library="home_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${IG_LOGO}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:36.092" endtime="20230129 17:57:37.010"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${IG_LOGO}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.030" level="INFO">Element '//li[@class='breadcrumb-item active']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.010" endtime="20230129 17:57:37.030"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_ICON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.030" endtime="20230129 17:57:37.057"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_ICON}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.078" level="INFO">Element '//a[@class='o_menu_brand']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.057" endtime="20230129 17:57:37.078"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.078" endtime="20230129 17:57:37.105"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.121" level="INFO">Element '//li[@class='o_user_menu']' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.105" endtime="20230129 17:57:37.121"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:36.092" endtime="20230129 17:57:37.121"></status>
+</kw>
+<kw name="WHEN CLICK BUTTON_RESUME" library="ponto_venda_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINK_KANBAN}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.122" endtime="20230129 17:57:37.150"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINK_KANBAN}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.170" level="INFO">Element '//div[@class="o_kanban_record"]' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.151" endtime="20230129 17:57:37.171"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BUTTON_RESUME}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.171" endtime="20230129 17:57:37.194"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BUTTON_RESUME}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.194" level="INFO">Clicking element '(//button[@data-name='open_ui'])[1]'.</msg>
+<status status="PASS" starttime="20230129 17:57:37.194" endtime="20230129 17:57:37.238"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:37.122" endtime="20230129 17:57:37.239"></status>
+</kw>
+<kw name="THEN the user should only see products from that category on the page" library="home_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINK_KANBAN}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.240" endtime="20230129 17:57:37.257"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${LINK_KANBAN}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.292" level="INFO">Element '//div[@class="o_kanban_record"]' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.258" endtime="20230129 17:57:37.292"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${BUTTON_RESUME}</arg>
+</arguments>
+<status status="PASS" starttime="20230129 17:57:37.292" endtime="20230129 17:57:37.311"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${BUTTON_RESUME}</arg>
+</arguments>
+<msg timestamp="20230129 17:57:37.328" level="INFO">Element '(//button[@data-name='open_ui'])[1]' is displayed.</msg>
+<status status="PASS" starttime="20230129 17:57:37.311" endtime="20230129 17:57:37.328"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:37.239" endtime="20230129 17:57:37.329"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230129 17:57:37.329" endtime="20230129 17:57:37.396"></status>
+</kw>
+<status status="PASS" starttime="20230129 17:57:29.743" endtime="20230129 17:57:37.396" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230129 17:57:29.577" endtime="20230129 17:57:37.400"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Ponto Venda Tests">Ponto Venda Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
